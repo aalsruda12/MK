@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    /*
+    어떤 수 x를 입력 받아서, x까지의 약수들의 합계를 구합니다.
+
+    ex)
+    x = 12
+    약수 = 2, 3, 5, 7, 11
+    합 = 28
+
+    소수의 판별은 약수의 갯수가 2개인지 체크하면 됨.
+
+    바깥 반복문 - 입력받은 수까지 회전
+    내부박복문 - 해당 수가 약수인지 판별
+
+    */
+
+    let num = parseInt( prompt("수를 입력하세요."))
+    let cnt = 0; //약수의 갯수를 누적할 변수
+    let sum = 0; //소수의 합을 누적할 변수
+
+
+    // //디버깅
+    // debugger; //중단점 한단계씩 중단하고 이 값이 왜이러는지 찾아줌(? 뭔말이여..)
+
+
+    for(let i = 1; i <= num; i++) {
+        cnt = 0;
+        //i는 소수인가? -> i의 약수의 갯수가 2개인가?
+        //i=1, j=1
+        //i=2, j=23
+        //i=100, j=100
+        for(let j = 1; j <= i; j++){
+            if(i % j === 0) {//i의 약수의 갯수 판별
+                cnt++;
+            }
+        }
+        if(cnt === 2){ //i는 소수라고 할 수 있음.
+           sum += i; //i를 누적한다.
+        }
+        
+    }
+    document.write(`입력받은 ${sum}까지의 소수의 합계는 ${sum}`);
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -23,6 +23,19 @@ console.log("변경된 값:" , a);
 
 //변수의 값을 다른 변수에 저장하는 것도 됩니다.
 var result = a + 100;
+
+
+
+
+
+
+
+
+
+
+
+
+
 console.log("result의 값:" , result);
 
 //let변수 -  es6에서 추가된 키워드
@@ -32,7 +45,7 @@ console.log("result의 값:" , result);
 
 //const - ES6에서 추가된 키워드 (상수 = 변하지 않는 값)
 const EARTH_RADIUS = 6400; //상수는 반드시 값을 선언해야 합니다.
-EARTH_RADIUS = 7000; //한번 선언되면 값이 변경이 불가능함
+// EARTH_RADIUS = 7000; //한번 선언되면 값이 변경이 불가능함
 
 
 console.log(EARTH_RADIUS);
