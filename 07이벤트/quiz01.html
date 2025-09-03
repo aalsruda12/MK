@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>이벤트 실습</h3>
+
+
+    <h3>셀렉트 태그의 주요 이벤트는 change</h3>
+    <select >
+        <option>사과</option>
+        <option>멜론</option>
+        <option>오렌지</option>
+    </select>
+
+    <h3>인풋 태그의 주요 이벤트는 input, focus, blur</h3>
+    <input type="text">
+
+
+    <h3>마우스이벤트 mounseenter, mouseleave</h3>    
+    <div id="box" style="width: 100px; height: 100px; border: 1px solid #777;">
+        
+    </div>
+
+    <script>
+        /*
+        각 태그에 이벤트를 걸어서 console창으로 동작을 확인
+        1. select는 인라인이벤트
+        2. 인풋태는 기본이벤트
+        3. div는 표준이벤트
+        */
+
+        //1. select는 인라인이벤트
+        function some(){
+            console.log("select태그의 값이 변경됨");
+            
+        }
+
+        //2.인풋태는 기본이벤트
+        let input = document.getElementById("my-input");
+        input.oninput = function(){
+            console.log("input태그의 값이 변경됨");
+            
+        }
+        input.onfocus = function() {
+            console.log("inpput태그에 포커스가 들어감");
+            
+        }
+        input.onblur = function(){
+            console.log("input태그에 포커스가 나감");
+            
+        }
+        //3.
+        let box = documet.getElementById("box")
+        box.addEventListener("mouseenter", () => {
+            console.log("마우스 진입함");
+            
+        });
+        box.addEventListener("mouseleave", () => {
+            console.log("마우스 떠남");
+            
+        });
+        
+    </script>
+
+
+
+</body>
+</html>

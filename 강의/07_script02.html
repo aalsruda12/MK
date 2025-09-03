@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>기본이벤트</h3>
+
+    <!--id = 화면에서 고유한 이름.-->
+    <button type="button" id="my-btn">기본이벤트 입니다!</button>
+
+
+
+    <script>
+
+        //1.버튼 태그에 이벤트를 걸기위해서 버튼 태그를 얻는다.
+        let btn = document.getElementById("my-btn"); 
+        //console.log(btn);
+
+        //2. 버튼태그 onclick속성에 함수를 대입하는 과정.
+        btn.onclick = function(){ //버튼이라는 객체에 온클릭이라는 속성에다가 펑션을 대입시킨거..뭐라는거임 ..? 하^^ 
+            alert("이벤트 동작함");
+
+        }
+
+        
+    </script>
+
+
+
+
+</body>
+</html>
