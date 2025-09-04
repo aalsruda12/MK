@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input{
+            outline: none;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+    아이디<input type="text" class="id" style="border: 2px solid red ;"> 
+    <p class="idtext">아이디는 4글자 이상</p>
+    비밀번호<input type="text" class="pw" style="border: 2px solid red;">
+    <p class="pwtext">비밀번호 9글자 이상</p>
+
+    <script>
+
+    let id = document.querySelector(".id");
+    let pw = document.querySelector(".pw");
+    let idtext = document.querySelector(".idtext")
+    let pwtext = document.querySelector(".pwtext")
+
+    id.oninput = function(){
+        if(id.value.length >= 4){
+            id.style.border = "2px solid green";
+            idtext.textContent = ""; 
+
+        }else {
+            id.style.border = "2px solid red";
+            idtext.textContent = "아이디는 4글자 이상";
+        }
+    }
+    id.oninput = function(){
+        if(pw.value.length >= 4){
+            
+        }
+    }
+
+    
+        
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
