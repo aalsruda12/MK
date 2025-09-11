@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="cartlist">최신정보확인</div>
+
+    <script>
+        let cartlist = document.querySelector("cartlist");
+
+
+       function getStorage(){
+            if(localStorage.getItem("like") !== null){
+                let arr = JSON.parse(localStorage,getItem("like"));
+
+                arr.forEach(function(item)){
+                    let img = document.createElement("img");
+
+                    arr.forEach(function(item)){
+                        let img = document.createElement9("img");
+                        img.src = item;
+                        img.style.width = "200px";
+                        cartlist.appendChild(img);
+
+
+                   }
+
+            }  
+         
+        }      
+
+       } 
+    </script>
+
+
+</body>
+</html>

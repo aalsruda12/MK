@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="#" name="form">
+        사용자명 <br> <input type="text" name="name" placeholder="3-20자 영문,숫자,언더스코어"><br>
+        이메일 <br> <input type="text" name="email" placeholder="example@domain.com"><br>
+        비밀번호 <br> <input type="password" name="pw1" placeholder="8자 이상,영문+숫자+특수문자"><br>
+        비밀번호 확인 <br> <input type="password" name="pw2" placeholder="비밀번호를 다시 입력하세요."><br>
+        <input type="submit" value="가입하기">
+
+    </form>
+
+
+    <script>
+
+    let numberValid = false;
+
+    let regex1 = /^[a-zA-Z0-9_]{3,20}$/
+    let regex2 = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let regex3 = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+    
+
+    form.name.oninput = function(){
+        if(form.name.value === ''){
+            form.name.style.border = "2px solid red ";
+            
+        }else if(form.name.value.length < 3 ){
+            form.name.style.border = "2px solid red ";
+            
+        }else{
+            form.name.style.border = "2px solid green ";
+           
+
+        }
+    }
+
+    pw2.oninput = function(){
+        if(pw1.vlaue ===pw2.value){
+            pw2.style.border = "2px solid green";
+        }else{
+            pw2.style.border = "2px solid red";
+        }
+    }
+
+
+    if(!regex1.test(form.name.value)){
+        alert("사용자묭은 3-20자 영문,숫자,언더스코어만 가능합니다.")
+        return;
+    }else if(!regex2.test(form.email.value)){
+        alert("유효한 이메일 형식을 입력해주세요.")
+        return;
+    }else if(!regex3.test(form.pw.value)){
+        alert("비밀번호는 8자이상,영문+숫자+특수문자를 포함해야 합니다.")
+        return;
+    }else (pw1.value !== pw2.vlaue){
+        alert("비밀번호가 일치하지 않습니다.")
+        return false;
+    }
+
+    
+
+
+
+    </script>
+    
+
+
+
+
+</body>
+</html>
